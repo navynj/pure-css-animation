@@ -1,0 +1,91 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 5rem;
+    height: 10rem;
+    background-color: #000;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.ears {
+    position: absolute;
+    top: -17.5%;
+    width: 100%;
+    height: 18%;
+}
+
+.ear {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ear .fur {
+    position: absolute;
+    width: 18%;
+    height: 100%;
+
+}
+
+.ear.right .fur {
+
+    right: 0;
+    transform: scaleX(-1);
+}
+
+.ear .fur:before, .ear .fur:after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 100%;
+    background-color: #000;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 50%;
+    transform-origin: left bottom;
+    transform: skew(-15deg);
+}
+
+.ear .fur:after {
+    width: 90%;
+    transform-origin: right bottom;
+    transform: translateX(125%) skew(15deg);
+}
+
+.head {
+    --width: 35%;
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - var(--width))/2);
+    width: var(--width);
+    height: 30%;
+    background: radial-gradient(farthest-side at top, transparent, transparent 99%, #000);
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    height: 6%;
+    margin-top: 15%;
+}
+
+.eyes:before, .eyes:after {
+    content: '';
+    width: 12%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
